@@ -108,7 +108,7 @@ void PrintPresentationGap(GroupPresentation &pres, std::ostream &out) {
 int main(int argc, char **argv) {
     std::string presentation;
     //std::getline(std::cin, presentation);
-    std::ifstream f("/home/epicurus/learning/itmo/projects/tietze/in2.txt");
+    std::ifstream f(argv[1]);
     auto pres = ParseGAP(f);
     std::cout << "presentation with " << pres->GeneratorCount() << " generators and " << pres->RelatorCount() << " relators of total length " << pres->RelatorsTotalLength() << std::endl;
     
